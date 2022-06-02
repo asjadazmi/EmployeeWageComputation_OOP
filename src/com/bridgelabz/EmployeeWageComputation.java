@@ -4,12 +4,8 @@ import java.util.*;
 public class EmployeeWageComputation {
     static final int IS_PRESENT=1;
     static final int IS_PART_TIME=2;
-	static final int Wage_per_HR=20;
-	static final int PART_TIME_hrs=4;
-	static final int Full_day_HRS=8;
-	public static final int NUM_OF_WORKING_DAYS=20;
-	public static int MAX_HRS_IN_MONTH=100;
-	public static int computeEmpWage() {
+	
+	public static int computeEmpWage(String Company,int Wage_per_HR,int NUM_OF_WORKING_DAYS,int MAX_HRS_IN_MONTH) {
 		int totalworkingdays=0;
 		int emphrs=0,totalemphrs=0;
 		while(totalemphrs<=MAX_HRS_IN_MONTH&&totalworkingdays<NUM_OF_WORKING_DAYS) {
@@ -35,7 +31,8 @@ public class EmployeeWageComputation {
 		return totalempwage;
 		}
 	public static void main(String args[]) {
-		computeEmpWage();
+		computeEmpWage("reliance",50,2,10);
+		computeEmpWage("Walmart",30,4,14);
 		
 	}
 }
